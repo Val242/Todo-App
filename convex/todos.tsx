@@ -58,3 +58,13 @@ export const clearAllTodos = mutation({
     return { deletedCount: todos.length };
   },
 });
+//handler: async (ctx) => {
+    // 1. Do something with ctx
+    //const data = await ctx.db.query("collectionName").collect(); 
+
+    // 2. Possibly process or filter data
+   // const filtered = data.filter(item => item.active);
+
+    // 3. Return the result
+   // return filtered;
+//}
