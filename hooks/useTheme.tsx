@@ -115,6 +115,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
     await AsyncStorage.setItem("darkMode", JSON.stringify(newMode));
+    //Storage systems like AsyncStorage, localStorage, or sending data over
+    //  an API can only handle strings, not raw objects.
+    //So before saving, you stringify.
+    //Stringify is used because asyncStorage can only store strings
+    //Using await makes sure the save finishes before moving on.
   };
 
   const colors = isDarkMode ? darkColors : lightColors;
